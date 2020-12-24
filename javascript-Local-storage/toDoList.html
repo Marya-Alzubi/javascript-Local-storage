@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To DO List</title>
+    <!-- <script src="Todo.js"></script>
+    <script src="Todo1.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- <div id="output">
+        maria
+        . getting to shool
+    </div> -->
+    <!-- <div id="wlc"></div> -->
+    <h1>To DO List</h1>
+    <input type="text" id="todo"><label>
+        <button id="enter">Enter</button></label>
+
+
+    <ul id="output"></ul>
+
+    <button>Clear All</button>
+
+
+
+    <script>
+
+
+        // let x = JSON.stringify(nameValue);
+        $('#enter').click(function () {
+            // event.preventDefault();
+            let inptValue = $('#todo').val();
+            let IsOutput = document.getElementById("output");
+            localStorage.setItem('key', $('#todo').val());
+            //  location.reload();
+
+            // $("#output").html(localStorage.getItem('key')); هذه تغير كل الdiv وهذا خطأ
+            let keyLacal = localStorage.getItem('key');
+            var newItem = document.createElement("li");       // Create a /////de
+            var textnode = document.createTextNode(keyLacal);  // Create a text node
+            newItem.appendChild(textnode);                    // Append the text to
+            document.body.appendChild(newItem);
+        })
+            //   //  let key1 = localStorage.setItem('key')
+            //     for (let i = 0; i < localStorage.length; i++) {
+            //         let key = localStorage.key(i);
+
+
+            //         IsOutput.innerHTML += key + "<br> ";
+
+
+
+
+
+// unorderdList = '</ul>''
+// toDoList1 = localStorage.getItem("nameKey") + " <br>
+// <ul>
+    // <li>"
+        // + المعضلة + "</li>"
+    </script>
+</body>
+
+</html>

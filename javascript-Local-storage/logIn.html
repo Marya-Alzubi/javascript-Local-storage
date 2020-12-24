@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form >
+        <label for="name">User Name :</label>
+        <input type="text" id="name">
+        <br>
+        <br>
+        <input type="button" id="btn" value="Register">
+    </form>
+
+    <script>
+         $("#btn").click(function(){
+        //    window.location = " toDoList.html ;"
+       
+        let userName = document.getElementById("name").value;
+        localStorage.setItem("namekey", userName );
+        console.log(userName);
+    })
+// localStorage.getItem("namekey");
+// localStorage.clear();
+
+
+    </script>
+</body>
+</html>
